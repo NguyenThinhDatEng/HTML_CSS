@@ -1,0 +1,65 @@
+* {
+  font-style: italic;
+}
+
+.class-1 {
+  color: red;
+  text-decoration: underline;
+}
+
+.class-2.class-3 {
+  color: green;
+  text-decoration: underline;
+}
+
+.class-5 {
+  color: pink;
+  text-decoration: underline;
+}
+
+p.class-6 {
+  color: blue;
+  text-decoration: underline;
+}
+
+.class-7,
+.class-8 {
+  text-decoration: underline;
+}
+
+h3,
+h4 {
+  color: brown;
+}
+
+.list li {
+  color: blue;
+}
+
+.list>li {
+  color: pink;
+}
+
+.class-9,
+.class-10 {
+  text-decoration: underline;
+}
+
+.class-9+p {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.class-9+p+p {
+  text-decoration: underline;
+}
+
+.class-10~p {
+  color: green;
+  text-decoration: underline;
+}
+
+[class]::after {
+  /* Bạn có thể comment dòng dưới đây để biết tác dụng của nó */
+  content: " (" attr(class) ")";
+}

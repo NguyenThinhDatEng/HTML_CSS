@@ -1,0 +1,387 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  /* improve UX */
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+/* 
+* Fix parent tag not holding child tag when using float
+*/
+.clear {
+  clear: both;
+}
+
+.main {}
+
+.header {
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navigation {
+  height: 46px;
+  display: inline-block;
+}
+
+/* inline: Not expand width of content equals width of parent */
+/* block: allow to control the size of element */
+/* block: Get element width equal parent width*/
+.navigation>li {
+  display: inline-block;
+}
+
+/* Get immediate child */
+.navigation li {
+  position: relative;
+}
+
+li a {
+  /* Set display to get size for a tag */
+  display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 0 24px;
+  text-transform: uppercase;
+  line-height: 46px;
+}
+
+.more-icon {
+  font-size: 10px;
+}
+
+.search {
+  float: right;
+  padding: 0 24px;
+  line-height: 46px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.search:hover {
+  background-color: #f00;
+}
+
+/* Get immediate child */
+.navigation>li:hover>a,
+.subnav li:hover a {
+  background-color: #ccc;
+  color: #000;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  /* 100% ~ the height of parent */
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.navigation li:hover .subnav {
+  display: block;
+}
+
+.subnav li a {
+  color: #000;
+  text-transform: capitalize;
+  padding: 0 16px;
+  line-height: 38px;
+}
+
+.slider {
+  margin-top: 46px;
+  /* Using % => Auto set by it's own width */
+  padding-top: 50%;
+  background-image: url(https://www.w3schools.com/w3images/chicago.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.slider .description {
+  padding: 32px 0;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.slider .description .title {
+  line-height: 36px;
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.slider .description .detail {
+  margin: 15px 0;
+  font-weight: bolder;
+}
+
+.content {}
+
+.content .section {
+  padding: 64px 16px;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.section .section-heading {
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 100;
+  letter-spacing: 4px;
+  line-height: 1.5;
+}
+
+.section .section-sub-heading {
+  font-size: 15px;
+  margin: 15px 0 !important;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.section .section-description {
+  text-align: justify;
+  line-height: 1.4;
+  margin: 15px 0;
+}
+
+.members {
+  padding: 32px 0 !important;
+}
+
+.member {
+  float: left;
+  width: calc(100% / 3);
+}
+
+.member-name {
+  font-size: 15px;
+  margin: 15px 0;
+  font-weight: unset;
+}
+
+.member img {
+  width: 150px;
+  border-radius: 4px;
+}
+
+.tickets {
+  margin-top: 33px;
+}
+
+.tickets li {
+  font-size: 15px;
+  text-align: left;
+  color: #757575;
+  width: 100%;
+  background-color: #fff;
+  padding: 8px 16px;
+}
+
+.tickets li>p,
+.tickets li>div {
+  display: inline-block;
+}
+
+.sold-out {
+  color: #fff;
+  margin-left: 16px;
+  background-color: #f44336;
+  padding: 0 8px;
+}
+
+.remaining {
+  float: right;
+  background-color: #000;
+  color: #fff;
+  padding: 0 8px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.tickets li+li {
+  border-top: #ddd solid 1px;
+}
+
+.places {
+  padding: 32px 0;
+  /* Kỹ thuật */
+  margin: 0 -8px;
+}
+
+.places .place {
+  float: left;
+  width: calc(100% / 3);
+  padding: 0 8px;
+}
+
+.places .place img {
+  width: 100%;
+  /* Remove the space between image and info */
+  /* cause by display: inline */
+  display: block;
+}
+
+.places .place .info {
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  padding: 15px;
+}
+
+.place-name {
+  font-weight: bold;
+}
+
+.time {
+  opacity: 0.6;
+}
+
+.place .info a {
+  padding: 8px 16px;
+  background-color: #000;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.place .info a:hover {
+  background-color: #ccc;
+}
+
+.contact {
+  padding: 32px 0;
+}
+
+.contact-us {
+  float: left;
+  text-align: left;
+  font-size: 18px;
+}
+
+.contact-us i {
+  margin-right: 16px;
+}
+
+.your-info {
+  float: right;
+  text-align: right;
+}
+
+.your-info input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+  font-size: inherit;
+}
+
+.row-1 {
+  margin-bottom: 8px;
+}
+
+.row-1 input:first-child {
+  float: left;
+  margin-right: 16px;
+}
+
+.row-2 input {
+  width: 100%;
+}
+
+.your-info button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #000;
+  margin-top: 16px;
+  border: none;
+  line-height: 1.5;
+}
+
+
+.map {
+  width: 100%;
+}
+
+.reference {
+  padding: 64px 16px;
+  position: relative;
+  text-align: center;
+}
+
+.brands i {
+  padding: 0 4px;
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+.brands i:hover {
+  opacity: 0.4;
+}
+
+.brands p {
+  margin: 15px 0;
+  opacity: 0.6;
+}
+
+.brands p a {
+  color: #000;
+}
+
+.background-black {
+  background-color: #000;
+  color: #fff;
+}
+
+.mt-15px {
+  margin-top: 15px;
+}
+
+.mb-15px {
+  margin-bottom: 15px;
+}
+
+.mlr-2 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.footer {}
