@@ -28,6 +28,7 @@
 ## Keywords
 
 - Overlay
+- Responsive (Break points)
 
 # CSS
 
@@ -132,7 +133,21 @@
 
 - Using % => Auto set by it's own width (Ex: padding-top: 50%)
 
-## Postion
+### overflow
+
+- The part that protrudes from the parent tag
+
+### text
+
+1. text-shadow
+2. text-align
+3. letter-spacing
+
+### animation
+
+- <keyframes_name> <type_of_animation> <time>
+
+## Position
 
 1. Relative (Take itself as the origin coordinate)
 
@@ -145,8 +160,38 @@
 - top: 0;
 - bottom: 0;
 
+## Flex box
+
+1. display
+2. flex-direction
+3. flex-wrap (no-wrap)
+
+- wrap|wrap-revert
+
+4. flex-basis (size of flex item - main size)
+5. justify-content
+6. justify-self (for flex item)
+7. align-content
+8. align-self (for flex item)
+9. flex-grow
+10. flex-shrink
+11. flex
+12. order
+13. flex-flow (flex direction + flex-wrap)
+
+## Keywords
+
+1. @media
+2. @keyframes
+
 # Javascript
 
 ## keyword
 
 - MODAL
+
+# Deploy
+
+## Technologies
+
+1. Ngrok

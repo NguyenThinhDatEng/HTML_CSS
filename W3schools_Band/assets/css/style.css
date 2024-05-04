@@ -47,10 +47,11 @@ button {
   left: 0;
   right: 0;
   z-index: 1;
+  height: 46px;
+  overflow: hidden;
 }
 
 .navigation {
-  height: 46px;
   display: inline-block;
 }
 
@@ -80,7 +81,8 @@ li a {
   font-size: 10px;
 }
 
-.search {
+.search,
+.menu {
   float: right;
   padding: 0 24px;
   line-height: 46px;
@@ -90,6 +92,15 @@ li a {
 
 .search:hover {
   background-color: #f00;
+}
+
+.menu {
+  display: none;
+}
+
+.menu:hover {
+  background-color: #ccc;
+  color: #000;
 }
 
 /* Get immediate child */
@@ -150,6 +161,7 @@ li a {
 .slider .description .detail {
   margin: 15px 0;
   font-weight: bolder;
+  text-shadow: 0 0 2px #000;
 }
 
 .content {}
@@ -178,7 +190,6 @@ li a {
 
 .section .section-description {
   text-align: justify;
-  line-height: 1.4;
   margin: 15px 0;
 }
 
@@ -312,7 +323,7 @@ li a {
   font-size: inherit;
 }
 
-.row-1 {
+.row-1 input {
   margin-bottom: 8px;
 }
 

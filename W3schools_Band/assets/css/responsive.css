@@ -1,0 +1,100 @@
+/* 
+  PC : >= 1024px
+  Tablet: 740px <= && < 1024px
+  Mobile: < 740px
+*/
+
+/* PC */
+@media (min-width: 64em) {}
+
+/* Tablet and Mobile */
+@media (max-width: 63.99em) {
+  body {
+    line-height: 2;
+    /* font-size: 18px; */
+  }
+
+  .buy-ticket,
+  .your-info button {
+    padding: 12px 20px;
+  }
+
+  .icons i {
+    padding: 0 12px;
+  }
+
+  .brands p a {
+    padding: 12px 0;
+  }
+
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.99em) {}
+
+/* Mobile */
+@media (max-width: 46.24em) {
+  .navigation {
+    display: block;
+  }
+
+  .navigation>li {
+    display: block;
+  }
+
+  .navigation>li:first-child {
+    display: inline-block;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .navigation>li.more {
+    display: none;
+  }
+
+  .member {
+    width: 100%;
+  }
+
+  .member img {
+    width: unset;
+    margin-bottom: 16px;
+  }
+
+  .places .place {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .contact-us {
+    margin-bottom: 32px;
+  }
+
+  .row-1 input {
+    width: 100%;
+    margin-right: unset !important;
+  }
+
+  .your-info,
+  .contact-us {
+    width: 100%;
+  }
+
+  .your-info button {
+    width: 100%;
+  }
+
+  .buy-ticket {
+    display: block;
+    text-align: center;
+  }
+}

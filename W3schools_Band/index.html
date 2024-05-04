@@ -9,6 +9,8 @@
   <!-- link:css -->
   <link rel="shortcut icon" href="./assets/img/icon/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Must be placed below style.css -->
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
 </head>
 
@@ -17,14 +19,14 @@
   <!-- ctrl + D: If the pointer is at the beginning of a word, select that word -->
   <!-- ctrl + D: Select next same highlight -->
   <div class="main">
-    <div class="header">
+    <div id="header" class="header">
       <!-- Begin: Navigation -->
       <ul class="navigation">
         <li><a href="#">home</a></li>
         <li><a href="#band">band</a></li>
         <li><a href="#tour">tour</a></li>
         <li><a href="#contact">contact</a></li>
-        <li><a href="#">more
+        <li class="more"><a href="#">more
             <i class="more-icon ti-angle-down"></i>
           </a>
           <ul class="subnav">
@@ -41,6 +43,12 @@
         <i class="ti-search"></i>
       </div>
       <!-- End: Search -->
+
+      <!-- Begin: Menu -->
+      <div class="menu">
+        <i class="ti-menu"></i>
+      </div>
+      <!-- End: Menu -->
     </div>
 
     <div class="slider">
@@ -142,11 +150,11 @@
             </div>
             <div>
               <i class="ti-mobile"></i>
-              <span>Phone: +00 151515</span>
+              <span>Phone: <a href="tel:+00 151515">+00 151515</a></span>
             </div>
             <div>
               <i class="ti-email"></i>
-              <span>Email: mail@mail.com</span>
+              <span>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></span>
             </div>
           </div>
           <form class="your-info">
@@ -175,6 +183,28 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var headerElement = document.getElementById("header");
+      const headerHeight = headerElement.clientHeight;
+
+      var menuBtn = headerElement.querySelector(".menu");
+      menuBtn.addEventListener("click", function () {
+        if (headerElement.clientHeight > headerHeight) {
+          headerElement.style.height = `${headerHeight}px`;
+        } else {
+          headerElement.style.height = 'auto';
+        }
+      });
+
+      var aElements = headerElement.querySelectorAll('a');
+      aElements.forEach(aElement => {
+        aElement.addEventListener('click', function () {
+          headerElement.style.height = `${headerHeight}px`;
+        });
+      });
+    </script>
+
 </body>
 
 </html>
